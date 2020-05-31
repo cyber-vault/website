@@ -8,17 +8,12 @@ menu:
     weight: 20
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
 
+The documentation contained in the knowledgebase is organized per section. Each of the sections contains subsections that might contain further subsections.
 
-This section is where the user documentation for your project lives - all the information your users need to understand and successfully use your project. 
+Since is is almost impossible to write one template for all of the types of knowledge that is stored each of the sections contain a basic template that is followed throughout the documentation.
 
-For large documentation sets we recommend adding content under the headings in this section, though if some or all of them don’t apply to your project feel free to remove them or add your own. You can see an example of a smaller Docsy documentation site in the [Docsy User Guide](https://docsy.dev/docs/), which lives in the [Docsy theme repo](https://github.com/google/docsy/tree/master/userguide) if you'd like to copy its docs section. 
+Please consult the subject sections for futher information on how templates looks, this will help you find the information you require faster.
 
-Other content such as marketing material, case studies, and community updates should live in the [About](/about/) and [Community](/community/) pages.
-
-Find out how to use the Docsy theme in the [Docsy User Guide](https://docsy.dev/docs/). You can learn more about how to organize your documentation (and how we organized this site) in [Organizing Your Content](https://docsy.dev/docs/best-practices/organizing-content/).
 
 
