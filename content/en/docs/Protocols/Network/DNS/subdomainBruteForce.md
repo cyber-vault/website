@@ -2,7 +2,7 @@
 title: "Subdomain Brute force"
 linkTitle: "Subdomain Brute force"
 date: 2020-05-31T16:20:47+02:00
-draft: true
+draft: false
 description: "using wordlists its possible to discover unlistedsubdomains." 
 ---
 It is possible to enumerate subdomains by brute forcing them by sending queries to the target name server and watching the  returns.

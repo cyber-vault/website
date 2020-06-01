@@ -2,7 +2,7 @@
 title: "Fast Flux attack"
 linkTitle: "Fast Flux attack"
 date: 2020-05-31T16:20:47+02:00
-draft: true
+draft: false
 description: "A DNS fast flux attack is an way to prevent blocking by firewalls. This is usually used by black hats." 
 ---
 Fast flux is a DNS technique that is used by attackers to try to evade blacklisting or discovery.

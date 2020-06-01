@@ -2,7 +2,7 @@
 title: "Spoofing attack"
 linkTitle: "Spoofing attack"
 date: 2020-05-31T16:20:47+02:00
-draft: true
+draft: false
 description: "it is possbile to corrupt DNS servers using a spoofing attack." 
 ---
 Also known als DNS poisioning this is an attack where currupt DNS data is introduced into the DNS resolvers cache causing the nameserver to return the wrong result.

@@ -2,7 +2,7 @@
 title: "Zone transfer"
 linkTitle: "Zone transfer"
 date: 2020-05-31T16:24:44+02:00
-draft: true
+draft: false
 ---
 
 The DNS zone transfer attack also known as AXFR attack because of the query that is usually performed.

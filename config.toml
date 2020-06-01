@@ -1,4 +1,4 @@
-baseURL = "/test"
+baseURL = "/"
 title = "CyberVault"
 
 enableRobotsTXT = true
@@ -142,4 +142,27 @@ enable = false
 # End user relevant links. These will show up on left side of footer and in the community page if you have one.
 
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+
+
+
+[deployment]
+[[deployment.targets]]
+name = "cybervault"
+URL = "s3://cybervault.nl/?region=eu-central-1"
+
+[[deployment.matchers]]
+#  Cache static assets for 1 year.
+pattern = "^.+\\.(js|css|svg|ttf)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = true
+
+[[deployment.matchers]]
+pattern = "^.+\\.(png|jpg)$"
+cacheControl = "max-age=31536000, no-transform, public"
+gzip = false
+
+[[deployment.matchers]]
+pattern = "^.+\\.(html|xml|json)$"
+gzip = true
+
 

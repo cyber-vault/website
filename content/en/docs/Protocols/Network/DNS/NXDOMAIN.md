@@ -2,7 +2,7 @@
 title: "NXDOMAIN attack"
 linkTitle: "NXDOMAIN attack"
 date: 2020-05-31T16:20:47+02:00
-draft: true
+draft: false
 description: "An denial of service attack that can be used to exhaust the resources on the DNS server." 
 ---
 The NXDOMAIN Attack is  Denial of service attacck where an attacker sends mass request for records that are either invalid or do not exist. This will consume resources on the server causing a slow down in lookups by valid clients. 

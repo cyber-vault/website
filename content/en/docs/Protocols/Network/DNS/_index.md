@@ -2,7 +2,7 @@
 title: "DNS"
 linkTitle: "DNS" 
 date: 2020-05-31T16:07:40+02:00
-draft: true
+draft: false
 description: "Domain Name Services translate hostnames to IPs"
 ---
 

@@ -2,7 +2,7 @@
 title: "Exfiltration via DNS"
 linkTitle: "Exfiltration via DNS"
 date: 2020-05-31T16:20:47+02:00
-draft: true
+draft: false
 description: "Exfiltration via DNS is relatively common in red team operations." 
 ---
 It is possible to exfiltrate DNS using normal DNS queries. The content of the query and the targeted DNS server must be set manually (by the attacker) but it allows data to be used in the packet for exfiltration.
