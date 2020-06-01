@@ -3,10 +3,10 @@ title: "DNS"
 linkTitle: "DNS" 
 date: 2020-05-31T16:07:40+02:00
 draft: true
+description: "Domain Name Services translate hostnames to IPs"
 ---
 
 Domain Name System (DNS) is a naming system for computers,services, or other resources connnected to a network.
-
 DNS is best known for translating domain names to IP addresses. DNS is ofcourse also able to do the reverse.
 
 The DNS server can contain many different types of entries for domains. The most common ones that you will encounter are listed below:
@@ -19,12 +19,11 @@ The DNS server can contain many different types of entries for domains. The most
 - CNAME : Domain name aliases
 - RP : ressponible person (dnssec?)
 - RBL : Realtime blackhole list (anti spam)
-- TXT: this record is used for various purposes but mainly seen in DKIM
+- TXT: this record is used for various purposes but mainly seen in DKIM, DMARC and SPF Records.
 
-## SOA Record
+### SOA Record
 Normally DNS name servers are setup in clusters to ensure redundancy. The database of each of these clusters is syncronized through zone transfers. The SOA record contains data to control the zone transfer within the zone. The data that is required is the serial numer and different timespans. 
 
-It also contains the
 Without this record your domain name does not function nor comply with RFC1035. There are values assigned within the SOA record it these values have properties assigned to them below is the list of values and their properties:
 
 - NAME: name of the zone
@@ -41,30 +40,30 @@ Without this record your domain name does not function nor comply with RFC1035. 
 - TTL: Time to live for negative cahcing. Recommendation for small and stable zones is 2 days
 - 
 
-## A and AAAA Record
+#### A and AAAA Record
 A and AAAA records are used to point to an IP adress. This can be an internal or exteral adress. Hostnames are not accepted in this field. 
 
 AAAA records are used exclusively for IPv6 adresses. The main difference between the A record and the AAAA record is the size of data it can hold. IPv4 is 32 bit and IPv6 is 128 bit. This is the reason for the naming scheme 4 times the size of the A record. 
 
-## MX record
+#### MX record
 The MX record is used to point to a mail server hostname or IP. The MX record can  take the optional value named PRIORITY this allows multiple MX records to be entered and a priority value to be assigned to it. The higher the priority value the later it is in the queue. 
 
-## NS Record
+#### NS Record
 The NS record holds the IP adresses or hostnames of the authorotative name servers. There can be multiple name servers assigned within one zone.
 
-## PTR  record
+#### PTR  record
 A PTR record contains the ip adress or part of the IP adress that the pointer is refering to. a pointer will always return ```<IP>.in-addr.arpa```
 
-## CNAME Record
+#### CNAME Record
 The CNAME record is an alias for a host. This measn that hosts and IPs can be set as its value
 
-## RP name
+#### RP name
 Responsible person name is an email adress in a format and i think its used for dnssec
 
-## RBL Record
+#### RBL Record
 Realtime Black hole List Contains a list of IP's who's accounts have been black listed from sending mails. Email servers can read these lists and blacklist emails in this manner. These lists are highly contriversal and are concidered the same as censorship. Still a lot of mail operators still use these servers.
 
-## TXT Record
+#### TXT Record
 Text records are used to send extra information that is used by other applications. This is one of the fields that needs to be set for DKIM email security features. 
 
 ## Transport protocol
@@ -91,7 +90,7 @@ The packet contains the following:
 4. Authority
 5. Additional
 
-### Header
+#### Header
 
 
 ```
@@ -114,7 +113,6 @@ The packet contains the following:
 
 ```
  This is the header that is send to the client. 
-
 
 Lets identify each of the fields in the p
 
@@ -140,7 +138,7 @@ Lets identify each of the fields in the p
 - ARCOUNT : an 16 bit integer specifiying the nuymber of resources in the record section.
 - 
 
-### Question
+#### Request (Question)
 
   ```
                                  1  1  1  1  1  1
@@ -161,7 +159,7 @@ Lets identify each of the fields in the p
 - QTYPE : A two octet code which specifies the type of the query (example 0x000f for MX records)
 - QCLASS : a two octet code that specified the class of the query.
 
-### Answer
+#### Response (Answer)
 ```
                                  1  1  1  1  1  1
            0  1  2  3  4  5  6  7  8  9  0  1  2  3  4  5
