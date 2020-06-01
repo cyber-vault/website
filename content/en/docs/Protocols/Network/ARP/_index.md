@@ -46,7 +46,7 @@ The arp packet is 224 octets in length and it contains the following types
 
 The entries are arranged in the following manner in the packet
 
-![5fbbd82f07a9d89196303cfdb12aa8b1.png](:/9ef701ebe1744ab2aa59a3467bdbb91e)
+![ARP Frame](ARP.png)
 
 Hardware Type: Each link layer protocol is assigned a numer used in this field. For Ethernet this number is 1.
 
