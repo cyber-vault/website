@@ -86,4 +86,5 @@ When user B hangs up a 200 OK is returned by user A to indicate the end of the s
 https://tools.ietf.org/html/rfc3665
 https://tools.ietf.org/html/rfc3261
 https://en.wikipedia.org/wiki/Session_Initiation_Protocol
+https://core.ac.uk/download/pdf/35460485.pdf
 
