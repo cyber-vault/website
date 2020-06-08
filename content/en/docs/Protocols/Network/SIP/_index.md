@@ -32,8 +32,7 @@ When a caller wants to start a session with another user on the same proxy. The 
 The low level has similar sections as the high level
 
 ### Registration
-When a user sends the REGISTER flag to the proxy it sends a challange to the user. 
-The user responds with his username and password this is encrypted with the challange and send to the proxy. If the authentication was succesfull the Proxy sends a 200 OK and the contact list to the user and assigns a Adress Of Record (AOR)
+When a user sends the REGISTER flag to the proxy, the proxy tries to register the location of the user. it sends a challange to the user. The user responds with his username and password this is encrypted with the challange and send to the proxy. If the authentication was succesfull the Proxy sends a 200 OK and the contact list to the user and assigns a Adress Of Record (AOR)
 
 ```
 
@@ -51,7 +50,7 @@ The user responds with his username and password this is encrypted with the chal
 ```
 
 ### Starting a session
-When user A starts a session he sends an F1 INVITE to user B. This causes device B to send a F2 RINGING back to user A.
+When user A starts a session he sends an F1 INVITE to user B this could be through the proxy server. This causes device B to send a F2 RINGING back to user A.
 
 If user B picks up the device the F3 200 OK is send to user A. This will trigger a ACK if the packet has been acknowledged.
 
@@ -86,5 +85,6 @@ When user B hangs up a 200 OK is returned by user A to indicate the end of the s
 https://tools.ietf.org/html/rfc3665
 https://tools.ietf.org/html/rfc3261
 https://en.wikipedia.org/wiki/Session_Initiation_Protocol
+https://medium.com/vartai-security/practical-voip-penetration-testing-a1791602e1b4
 https://core.ac.uk/download/pdf/35460485.pdf
-
+https://www.exploit-db.com/docs/english/18136-paper-enumerating-and-breaking-voip.pdf
